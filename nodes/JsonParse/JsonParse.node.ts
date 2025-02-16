@@ -12,8 +12,8 @@ export class JsonParse implements INodeType {
 		defaults: {
 			name: 'Parse JSON',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'] as NodeConnectionType.Main[],
+		outputs: ['main'] as NodeConnectionType.Main[],
 		properties: [
 			{
 				displayName: 'JSON String',
@@ -21,7 +21,7 @@ export class JsonParse implements INodeType {
 				type: 'string',
 				default: '',
 				placeholder: '```json\n{\n\t"key": "value"\n}\n```',
-				description: 'The JSON string to parse. Can be clean JSON or kinda dirty JSON, but it must be valid JSON',
+				description: 'The JSON string to parse. Can be clean JSON or kinda dirty JSON, but it must be valid JSON.',
 			},
 		],
 	};

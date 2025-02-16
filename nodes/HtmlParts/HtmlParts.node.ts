@@ -14,8 +14,8 @@ export class HtmlParts implements INodeType {
 		defaults: {
 			name: 'HTML parts',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'] as NodeConnectionType.Main[],
+		outputs: ['main'] as NodeConnectionType.Main[],
 		properties: [
 			{
 				displayName: 'Raw HTML',
