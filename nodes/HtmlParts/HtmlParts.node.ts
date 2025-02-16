@@ -49,11 +49,13 @@ export class HtmlParts implements INodeType {
 					mainContent = '';
 				}
 
+				let textContent = $(mainContent).find('style').remove().end().find('script').remove().end().text();
 				// remove superfluous newlines x3 and tabs
 				mainContent = mainContent?.replace(/(\r\n|\n \n|\r|\t)/gm, '');
 
 				// $('script').remove();
 				$('style').remove();
+
 
 				let objects = {
 					title: $('title').text(),
@@ -72,17 +74,16 @@ export class HtmlParts implements INodeType {
 					ogAuthor: $('meta[property="article:author"]').attr('content'),
 					ogSection: $('meta[property="article:section"]').attr('content'),
 					ogTag: $('meta[property="article:tag"]').attr('content'),
-					mainContent: mainContent,
 					meta: $('meta').map((_, el) => $(el).attr('content')).get(),
 					links: $('link').map((_, el) => $(el).attr('href')).get(),
 					images: $('img').map((_, el) => $(el).attr('src')).get(),
-					text: $('body').text(),
 					videos: $('video').map((_, el) => $(el).attr('src')).get(),
 					iframes: $('iframe').map((_, el) => $(el).attr('src')).get(),
 					headings: $('h1, h2, h3, h4, h5, h6').map((_, el) => ({level: el.tagName.toLowerCase(), text: $(el).text().trim()})).get(),
-					html: $.html(),
-					wordCount: $(mainContent).text().split(/\s+/).length,
-					characterCount: $(mainContent).text().length
+					text: textContent,
+					wordCount: textContent.split(/\s+/).length,
+					characterCount: textContent.length,
+					mainContent: mainContent
 				};
 
 				item.json.data = objects;
