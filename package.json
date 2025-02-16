@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-html-tag-extract",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n helper nodes to extract HTML tags, parse JSON and more",
   "packageManager": "pnpm@9.1.4",
   "main": "index.js",
