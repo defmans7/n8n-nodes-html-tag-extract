@@ -12,8 +12,7 @@ HTML Tag Extract, provides helper nodes to extract HTML tags, parse JSON... and 
 
 [Installation](#installation)  
 [Operations](#operations)  
-[Usage](#usage)    
-[Resources](#resources)  
+[Usage](#usage)  
 [Acknowledgements](#acknowledgements)  
 [Further (future) development](#further-future-development)
 
@@ -36,11 +35,6 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 ### Parse JSON
 * Pass a string containing JSON to the Parse JSON node, and it will return the parsed object.
 * Sometimes LLM output contains a JSON string within a code block: \```json {"key": "value"} ``` and this node will remove the junk and return the parsed object.
-
-
-## Resources
-
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 
 ## Acknowledgements
 
