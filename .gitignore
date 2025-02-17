@@ -90,3 +90,5 @@ tmp
 yarn.lock
 .vscode/launch.json
 bun.lockb
+.aiderignore
+.aider*

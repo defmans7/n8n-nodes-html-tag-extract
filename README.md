@@ -14,6 +14,8 @@ HTML Tag Extract, provides helper nodes to extract HTML tags, parse JSON... and 
 [Operations](#operations)  
 [Usage](#usage)    
 [Resources](#resources)  
+[Acknowledgements](#acknowledgements)  
+[Further (future) development](#further-future-development)
 
 ## Installation
 
@@ -39,7 +41,11 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 ## Resources
 
 * [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
+
+## Acknowledgements
+
 * [Cheerio provides the HTML Tag Extract node](https://www.npmjs.com/package/cheerio)
+* N8N team for the great platform and documentation
 
 ## Further (future) development
 
@@ -51,4 +57,4 @@ Also:
 * Find all articles
 * List internal and external links separately
 * Implement better cleanup methods for the text content
-* Maybe include Markdown as an output format, but there's already a node for HTML to Markdown conversion
+* Maybe include Markdown as an output format, but there's already a community node for [HTML to Markdown conversion](https://www.npmjs.com/package/n8n-nodes-turndown-html-to-markdown)
