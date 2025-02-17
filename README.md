@@ -46,6 +46,7 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 * [Cheerio provides the HTML Tag Extract node](https://www.npmjs.com/package/cheerio)
 * N8N team for the great platform and documentation
+* Aider, mainly for commit messages
 
 ## Further (future) development
 
