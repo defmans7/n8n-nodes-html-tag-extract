@@ -42,6 +42,7 @@ export class JsonParse implements INodeType {
 
 				let jsonCleaned = jsonString
 					.replace('```json', '')
+					.replace('``` json', '')
 					.replace('```', '')
 					.replace('\n', '')
 					.trim();
@@ -51,6 +52,14 @@ export class JsonParse implements INodeType {
 				} catch (error) {
 					// If the JSON is not valid we try to clean it up and parse it again
 					jsonObject = JSON.parse(jsonCleaned);
+				}
+
+				/* if there is still no JSON object, let's extract it manually */
+				if (Object.keys(jsonObject).length === 0) {
+					let jsonStart = jsonString.indexOf('{');
+					let jsonEnd = jsonString.lastIndexOf('}');
+					jsonString = jsonString.substring(jsonStart, jsonEnd + 1);
+					jsonObject = JSON.parse(jsonString);
 				}
 
 				item.json.jsonObject = jsonObject;
